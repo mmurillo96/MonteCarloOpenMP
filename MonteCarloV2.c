@@ -21,8 +21,8 @@ int main() {
 
     #pragma omp parallel private(seed, x, y) reduction(+:numIn) 
     {
-        //seed = 25234 + 17 * omp_get_thread_num();
-        seed = omp_get_thread_num();
+        seed = 25234 + 17 * omp_get_thread_num();
+        //seed = omp_get_thread_num();
         #pragma omp for
         for (i = 0; i <= n; i++) {
             x = (double)rand_r(&seed) / RAND_MAX;
