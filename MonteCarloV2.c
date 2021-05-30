@@ -5,7 +5,9 @@
 
 
 int main(int argc, char *argv[]) {
-
+    //argumento 1 numero de threads
+    //argumento 2 potencia
+    
     int i, numIn, n, potencia;
     unsigned int seed;
     double x, y, pi;
