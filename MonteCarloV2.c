@@ -8,7 +8,7 @@ int main(int argc, char *argv[]) {
     //argumento 1 numero de threads
     //argumento 2 potencia
     
-    int i, numIn, n, potencia;
+    long i, numIn, n, potencia;
     unsigned int seed;
     double x, y, pi;
 
@@ -19,13 +19,14 @@ int main(int argc, char *argv[]) {
     for (i = 0; i < potencia; i++) {
            n = n*10; 
     }
+    
     numIn = 0;
 
     time_t timeInicio = time(NULL);
 
     printf("-----------------------------------\n");
-    printf("Potencia: %i\n",potencia);
-    printf("Numeros sorteados: %i\n",n);
+    printf("Potencia: %ld\n",potencia);
+    printf("Numeros sorteados: %ld\n",n);
     printf("Quantidade de Threads: 2\n");
     printf("-----------------------------------\n");
 
