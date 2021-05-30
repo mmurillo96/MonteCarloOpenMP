@@ -3,13 +3,15 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main() {
+
+int main(int argc, char *argv[]) {
+
     int i, numIn, n, potencia;
     unsigned int seed;
     double x, y, pi;
 
-    omp_set_num_threads(8);
-    potencia = 7;
+    omp_set_num_threads(atoi(argv[1]));//numero de threads
+    potencia = atoi(argv[2]);//potencia
     n = 10;
 
     for (i = 0; i < potencia; i++) {
@@ -20,6 +22,7 @@ int main() {
     time_t timeInicio = time(NULL);
 
     printf("-----------------------------------\n");
+    printf("Potencia: %i\n",potencia);
     printf("Numeros sorteados: %i\n",n);
     printf("Quantidade de Threads: 2\n");
     printf("-----------------------------------\n");
