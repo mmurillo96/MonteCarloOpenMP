@@ -4,11 +4,15 @@
 #include <time.h>
 
 int main() {
-    int i, numIn, n;
+    int i, numIn, n, potencia;
     unsigned int seed;
     double x, y, pi;
 
-    n = 10*10*10*10*10*10*10*10*10;
+    potencia = 3;
+    n = 10;
+    for (i = 0; i < potencia; i++) {
+           n = n*10; 
+    }
     numIn = 0;
 
     time_t timeInicio = time(NULL);
@@ -23,15 +27,16 @@ int main() {
         for (i = 0; i <= n; i++) {
             x = (double)rand_r(&seed) / RAND_MAX;
             y = (double)rand_r(&seed) / RAND_MAX;
-            if (x*x + y*y <= 1) numIn++;
+            if (x*x + y*y <= 1){
+                 numIn++;
+            }
         }
     }
+
     pi = 4.*numIn / n;
     
-
     printf("Resultado: pi %f \n", pi);
 
-    //mostra o tempo final
     time_t timeFim = time(NULL);
     printf("Fim: %s \n", ctime(&timeFim));
 
