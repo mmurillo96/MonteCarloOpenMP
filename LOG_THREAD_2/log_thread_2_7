@@ -58,6 +58,16 @@ Quantidade de Threads: 2
 Resultado PI: 3.141782 
 Tempo gasto: 0.09621418 s
 -----------------------------------
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP$ ./mcV2 2 7 7
+-----------------------------------
+Potencia: 7
+Qtd de pontos Sorteados: 10000000
+Qtd de pontos Sorteados por Thread: 5000000
+Quantidade de Threads: 2
+
+Resultado PI: 3.142122 
+Tempo gasto: 0.08804726 s
+-----------------------------------
 murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP$ ./mcV2 2 7 8
 -----------------------------------
 Potencia: 7
