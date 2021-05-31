@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
 
     omp_set_num_threads(atoi(argv[1]));//numero de threads
     potencia = atoi(argv[2]);//potencia
-    totalPontos = 10;
+    totalPontos = 1;
 
     for (i = 0; i < potencia; i++) {
            totalPontos = totalPontos*10; 
