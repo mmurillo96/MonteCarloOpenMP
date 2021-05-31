@@ -2,32 +2,50 @@
 #include <stdlib.h>
 #include <time.h>
 
-int main() {
-    int i, numIn, n;
-    double x, y, pi;
-
-    n = 10*10*10*10*10*10*10*10*10;
-    numIn = 0;
-
-    time_t timeInicio = time(NULL);
-    printf("Inicio: %s\n", ctime(&timeInicio));
-
-    for (i = 0; i <= n; i++) {
-        x = (double)rand() / (double)RAND_MAX;
-        y = (double)rand() / (double)RAND_MAX;
-        if (x*x + y*y <= 1) numIn++;
+int main(int argc, char *argv[]) {
+    //argumento 2 potencia
+    
+    if(argc < 2){
+        printf("Digite todos os parametros.\n");
+        return 0;
     }
+    
+    long i, contValidos, totalPontos, potencia;
+    double x, y, pi;
+    clock_t start, end;
+    
+    potencia = atoi(argv[1]);
+    totalPontos = 1;
+    contValidos = 0;
 
-    pi = 4.*numIn / n;
+    for (i = 0; i < potencia; i++) {
+           totalPontos = totalPontos*10; 
+    }
+    
+    printf("-----------------------------------\n");
+    printf("Potencia: %ld\n",potencia);
+    printf("Qtd de pontos Sorteados: %ld\n",totalPontos);
+    
     
 
-    printf("Resultado: pi %f \n", pi);
+    start = clock();
 
-    //mostra o tempo final
-    time_t timeFim = time(NULL);
-    printf("Fim: %s \n", ctime(&timeFim));
+    for (i = 0; i <= totalPontos; i++) {
+        x = (double)rand() / (double)RAND_MAX;
+        y = (double)rand() / (double)RAND_MAX;
+        if (x*x + y*y <= 1) contValidos++;
+    }
 
-    printf("Tempo gasto: %f milissegundos\n", difftime(timeFim, timeInicio));    
+    pi = 4.*contValidos / totalPontos;
+    
+
+    printf("Resultado PI: %f \n", pi);
+
+    end = clock();
+    
+    printf("Tempo gasto: %f\n", ((double) (end - start)) / CLOCKS_PER_SEC);    
+
+    printf("-----------------------------------\n");
 
     return 0;
 }
