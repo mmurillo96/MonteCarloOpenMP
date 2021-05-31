@@ -1,0 +1,59 @@
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP/MonteCarloOpenMP$ make MonteCarloSequencial
+make: 'MonteCarloSequencial' está atualizado.
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP/MonteCarloOpenMP$ ./MonteCarloSequencial 3
+-----------------------------------
+Potencia: 3
+Qtd de pontos Sorteados: 1000
+Resultado PI: 3.136000 
+Tempo gasto: 0.000051
+-----------------------------------
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP/MonteCarloOpenMP$ ./MonteCarloSequencial 4
+-----------------------------------
+Potencia: 4
+Qtd de pontos Sorteados: 10000
+Resultado PI: 3.171600 
+Tempo gasto: 0.000211
+-----------------------------------
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP/MonteCarloOpenMP$ ./MonteCarloSequencial 5
+-----------------------------------
+Potencia: 5
+Qtd de pontos Sorteados: 100000
+Resultado PI: 3.141560 
+Tempo gasto: 0.004127
+-----------------------------------
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP/MonteCarloOpenMP$ ./MonteCarloSequencial 6
+-----------------------------------
+Potencia: 6
+Qtd de pontos Sorteados: 1000000
+Resultado PI: 3.141668 
+Tempo gasto: 0.022105
+-----------------------------------
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP/MonteCarloOpenMP$ ./MonteCarloSequencial 7
+-----------------------------------
+Potencia: 7
+Qtd de pontos Sorteados: 10000000
+^[[AResultado PI: 3.141130 
+Tempo gasto: 0.199699
+-----------------------------------
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP/MonteCarloOpenMP$ ./MonteCarloSequencial 8
+-----------------------------------
+Potencia: 8
+Qtd de pontos Sorteados: 100000000
+Resultado PI: 3.141698 
+Tempo gasto: 2.012703
+-----------------------------------
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP/MonteCarloOpenMP$ ./MonteCarloSequencial 9
+-----------------------------------
+Potencia: 9
+Qtd de pontos Sorteados: 1000000000
+Resultado PI: 3.141604 
+Tempo gasto: 20.538842
+-----------------------------------
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP/MonteCarloOpenMP$ ./MonteCarloSequencial 10
+-----------------------------------
+Potencia: 10
+Qtd de pontos Sorteados: 10000000000
+Resultado PI: 3.141601 
+Tempo gasto: 209.843502
+-----------------------------------
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP/MonteCarloOpenMP$ 
