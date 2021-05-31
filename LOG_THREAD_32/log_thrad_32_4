@@ -1,0 +1,101 @@
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP$ ./mcV2 32 4 1
+-----------------------------------
+Potencia: 4
+Qtd de pontos Sorteados: 10000
+Qtd de pontos Sorteados por Thread: 312
+Quantidade de Threads: 32
+
+Resultado PI: 3.225600 
+Tempo gasto: 0.00147724 s
+-----------------------------------
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP$ ./mcV2 32 4 2
+-----------------------------------
+Potencia: 4
+Qtd de pontos Sorteados: 10000
+Qtd de pontos Sorteados por Thread: 312
+Quantidade de Threads: 32
+
+Resultado PI: 3.161600 
+Tempo gasto: 0.00146840 s
+-----------------------------------
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP$ ./mcV2 32 4 3
+-----------------------------------
+Potencia: 4
+Qtd de pontos Sorteados: 10000
+Qtd de pontos Sorteados por Thread: 312
+Quantidade de Threads: 32
+
+Resultado PI: 3.276800 
+Tempo gasto: 0.00142996 s
+-----------------------------------
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP$ ./mcV2 32 4 4
+-----------------------------------
+Potencia: 4
+Qtd de pontos Sorteados: 10000
+Qtd de pontos Sorteados por Thread: 312
+Quantidade de Threads: 32
+
+Resultado PI: 3.225600 
+Tempo gasto: 0.00110273 s
+-----------------------------------
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP$ ./mcV2 32 4 5
+-----------------------------------
+Potencia: 4
+Qtd de pontos Sorteados: 10000
+Qtd de pontos Sorteados por Thread: 312
+Quantidade de Threads: 32
+
+Resultado PI: 3.187200 
+Tempo gasto: 0.00099478 s
+-----------------------------------
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP$ ./mcV2 32 4 6
+-----------------------------------
+Potencia: 4
+Qtd de pontos Sorteados: 10000
+Qtd de pontos Sorteados por Thread: 312
+Quantidade de Threads: 32
+
+Resultado PI: 3.379200 
+Tempo gasto: 0.00113097 s
+-----------------------------------
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP$ ./mcV2 32 4 7
+-----------------------------------
+Potencia: 4
+Qtd de pontos Sorteados: 10000
+Qtd de pontos Sorteados por Thread: 312
+Quantidade de Threads: 32
+
+Resultado PI: 3.110400 
+Tempo gasto: 0.00104581 s
+-----------------------------------
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP$ ./mcV2 32 4 8
+-----------------------------------
+Potencia: 4
+Qtd de pontos Sorteados: 10000
+Qtd de pontos Sorteados por Thread: 312
+Quantidade de Threads: 32
+
+Resultado PI: 3.276800 
+Tempo gasto: 0.00117744 s
+-----------------------------------
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP$ ./mcV2 32 4 9
+-----------------------------------
+Potencia: 4
+Qtd de pontos Sorteados: 10000
+Qtd de pontos Sorteados por Thread: 312
+Quantidade de Threads: 32
+
+Resultado PI: 3.302400 
+Tempo gasto: 0.00091396 s
+-----------------------------------
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP$ ./mcV2 32 4 10
+-----------------------------------
+Potencia: 4
+Qtd de pontos Sorteados: 10000
+Qtd de pontos Sorteados por Thread: 312
+Quantidade de Threads: 32
+
+Resultado PI: 3.174400 
+Tempo gasto: 0.00101621 s
+-----------------------------------
+murillo@murillo-VirtualBox:~/Documentos/Projeot 1 - OpenMP$ 
