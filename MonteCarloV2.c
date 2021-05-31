@@ -7,6 +7,7 @@
 int main(int argc, char *argv[]) {
     //argumento 1 numero de threads
     //argumento 2 potencia
+    //argumento 3 num aleatorio para seed
     
     long i, contSucesso, totalPontos, potencia;
     unsigned int seed;
@@ -30,12 +31,12 @@ int main(int argc, char *argv[]) {
     printf("Qtd de pontos Sorteados: %ld\n",totalPontos);
     printf("Qtd de pontos Sorteados por Thread: %ld\n",totalPontos/quantThread);
     printf("Quantidade de Threads: %ld\n",quantThread);
-    printf("-----------------------------------\n");
+    
 
     #pragma omp parallel private(seed, x, y) reduction(+:contSucesso) 
     {
         //este calculo deve gerar seeds diferentes para cada execução.
-        seed = 25234 + potencia * omp_get_thread_num();
+        seed = 25234 + potencia * omp_get_thread_num() * atoi(argv[3]);
 
         //printf("Numero de Thread: %i\n",omp_get_thread_num());
         int thread = omp_get_thread_num();
@@ -58,7 +59,8 @@ int main(int argc, char *argv[]) {
 
     printf("\nResultado PI: %f \n", pi);
 
-    printf("Tempo gasto: %0.8f s\n",(end_time-start_time));    
-
+    printf("Tempo gasto: %0.8f s\n",(end_time-start_time));  
+    
+    printf("-----------------------------------\n");
     return 0;
 }
