@@ -1,4 +1,6 @@
 # MonteCarloOpenMP
+ - O arquivo MonteCarlo esta desatualizado e não deve ser considerado
+ - O arquivo MonteCarloV2 contem o algoritimo para calcular o valor de PI utilizando a estrategia monte carlo com OpenMP
 
 gcc -o mcV2 -fopenmp MonteCarloV2.c
 
