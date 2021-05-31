@@ -11,6 +11,8 @@ int main(int argc, char *argv[]) {
     long i, numIn, n, potencia;
     unsigned int seed;
     double x, y, pi;
+    long quantThread = atoi(argv[1]);
+    double start_time,end_time;
 
     omp_set_num_threads(atoi(argv[1]));//numero de threads
     potencia = atoi(argv[2]);//potencia
@@ -22,40 +24,40 @@ int main(int argc, char *argv[]) {
     
     numIn = 0;
 
-    time_t timeInicio = time(NULL);
+    start_time = omp_get_wtime();
 
     printf("-----------------------------------\n");
     printf("Potencia: %ld\n",potencia);
-    printf("Numeros sorteados: %ld\n",n);
-    printf("Quantidade de Threads: 2\n");
+    printf("Qtd de pontos Sorteados: %ld\n",n);
+    printf("Qtd de pontos Sorteados por Thread: %ld\n",n/quantThread);
+    printf("Quantidade de Threads: %ld\n",quantThread);
     printf("-----------------------------------\n");
-
-    printf("Inicio: %s\n", ctime(&timeInicio));
-
 
     #pragma omp parallel private(seed, x, y) reduction(+:numIn) 
     {
         seed = 25234 + 17 * omp_get_thread_num();
-        printf("Numero de Thread: %i\n",omp_get_thread_num());
-        //seed = omp_get_thread_num();
-        #pragma omp for
-        for (i = 0; i <= n; i++) {
-            x = (double)rand_r(&seed) / RAND_MAX;
-            y = (double)rand_r(&seed) / RAND_MAX;
-            if (x*x + y*y <= 1){
-                 numIn++;
-            }
-        }
+        //printf("Numero de Thread: %i\n",omp_get_thread_num());
+        int thread = omp_get_thread_num();
+        long n_thread = n / quantThread;
+        //printf("Quant Pontos Thread: %i\n",n_thread);
+
+        #pragma omp for       
+            for (i = 0; i <= n_thread ; i++) {
+                x = (double)rand_r(&seed) / RAND_MAX;
+                y = (double)rand_r(&seed) / RAND_MAX;
+                if (x*x + y*y <= 1){
+                    numIn++;
+                }
+            }        
     }
-
-    pi = 4.*numIn / n;
     
-    printf("\nResultado: pi %f \n", pi);
+    pi = 4.*(numIn*quantThread) / n;
+    
+    end_time=omp_get_wtime();
 
-    time_t timeFim = time(NULL);
-    printf("Fim: %s \n", ctime(&timeFim));
+    printf("\nResultado PI: %f \n", pi);
 
-    printf("Tempo gasto: %f milissegundos\n", difftime(timeFim, timeInicio));    
+    printf("Tempo gasto: %0.8f s\n",(end_time-start_time));    
 
     return 0;
 }
