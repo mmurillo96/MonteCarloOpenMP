@@ -35,7 +35,9 @@ int main(int argc, char *argv[]) {
 
     #pragma omp parallel private(seed, x, y) reduction(+:numIn) 
     {
-        seed = 25234 + 17 * omp_get_thread_num();
+        //este calculo deve gerar seeds diferentes para cada execução.
+        seed = 25234 + potencia * omp_get_thread_num();
+        
         //printf("Numero de Thread: %i\n",omp_get_thread_num());
         int thread = omp_get_thread_num();
         long n_thread = n / quantThread;
