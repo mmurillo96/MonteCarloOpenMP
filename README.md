@@ -3,6 +3,6 @@
 
 gcc -o mcV2 -fopenmp MonteCarloV2.c
 
-./mcV2 2 8
+./mcV2 2 8 1
 
-primeiro passa a quantidade de threads e depois a potencia para a quantidade de pontos
+primeiro passa a quantidade de threads, depois a potencia para a quantidade de pontos e por ultimo um numero aleatorio para tornar a seed exclusiva
