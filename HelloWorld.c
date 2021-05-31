@@ -12,7 +12,7 @@ int main(int argc, char* argv[])
 	{
 		// Getting thread number
 		tid = omp_get_thread_num();
-		printf("Welcome to GFG from thread = %d\n",
+		printf("Hellow World from thread = %d\n",
 			tid);
 
 		if (tid == 0) {
