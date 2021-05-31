@@ -9,6 +9,11 @@ int main(int argc, char *argv[]) {
     //argumento 2 potencia
     //argumento 3 num aleatorio para seed
     
+    if(argc < 4){
+        printf("Digite todos os parametros.");
+        return;
+    }
+    
     long i, contSucesso, totalPontos, potencia;
     unsigned int seed;
     double x, y, pi, start_time, end_time;
